@@ -5,12 +5,16 @@
 <!-- 🐨 Then create a <script type="module"> for your JavaScript -->
 
 <body>
-    <div id="root" />
+    <!-- <div id="root" /> -->
     <script type="module">
+        const rootNode = document.getRootNode()
+        const rootDiv = document.createElement("div")
+        rootDiv.id = "root"
         const div = document.createElement("div")
         div.textContent = "Hello World"
         div.className = "container"
-        document.getElementById("root").append(div)
+        rootDiv.append(div)
+        rootNode.activeElement.append(rootDiv)
     </script>
 </body>
 
